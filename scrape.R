@@ -1,14 +1,8 @@
-# Install required packages
-install.packages("")
-
 # Loading required packages
 library(parallel)
 library(rvest)
 library(tidyverse)
 library(xlsx)
-
-# Cleaning environment
-rm(list = ls())
 
 # Function to obtain the number of products per category
 get_total_products <- function(html) {
@@ -42,7 +36,7 @@ get_products <- function(html){
   return(result)
 }
 
-# Function to create required urls (required get_products function)
+# Function to create required urls (requires get_products function)
 create_url <- function(html = "https://www.ah.nl/producten/") {
 
 categories <- read_html(html) %>%
