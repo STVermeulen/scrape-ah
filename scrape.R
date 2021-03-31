@@ -99,6 +99,6 @@ data <- bind_rows(datalist)
 # Save scraped data
 write.table(data, str_c(Sys.Date(), ".txt"), row.names = F)
 write.csv(data, paste0(Sys.Date(), ".csv"), row.names = F)
-write.xlsx2(data, paste0(Sys.Date(), ".xlsx"), row.names = F)
+
 
 
